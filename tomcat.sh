@@ -1,16 +1,16 @@
 #!/bin/bash
 sudo apt-get update 
 sudo apt-get install openjdk-8-jdk -y
-wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
-tar -xvf apache-tomcat-8.5.50.tar.gz
-cd apache-tomcat-8.5.50/bin
+wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz
+tar -xvf apache-tomcat-8.5.51.tar.gz
+cd apache-tomcat-8.5.51/bin
 sh startup.sh
 echo
 echo 
-echo "edit context.xml==> vi apache-tomcat-8.5.50/webapps/host-manager/META-INF/contex.xml
+echo "edit context.xml==> vi apache-tomcat-8.5.51/webapps/host-manager/META-INF/contex.xml
 .*
 
-tomcat-users.xml==> vi apache-tomcat-8.5.50/conf/tomcat-users.xml
+tomcat-users.xml==> vi apache-tomcat-8.5.51/conf/tomcat-users.xml
 
 <?xml version='1.0' encoding='utf-8'?>
 <tomcat-users>
@@ -19,6 +19,6 @@ tomcat-users.xml==> vi apache-tomcat-8.5.50/conf/tomcat-users.xml
 </tomcat-users>
 
 
- & service.xml==> vi apache-tomcat-8.5.50/conf/service.xml
+ & service.xml==> vi apache-tomcat-8.5.51/conf/service.xml
 
   and restart tomcat again"
