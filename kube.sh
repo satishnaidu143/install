@@ -32,8 +32,11 @@ mkdir -p /etc/systemd/system/docker.service.d
 # Restart Docker
 systemctl daemon-reload
 systemctl restart docker
-sudo systemctl enable docker      
+sudo systemctl enable docker
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF      
 apt-get update
-usermod -aG docker ubuntu jenkins
 apt-get install -y kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
