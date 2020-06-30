@@ -29,14 +29,12 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 mkdir -p /etc/systemd/system/docker.service.d
-# Restart Docker
-systemctl daemon-reload
-systemctl restart docker
-sudo systemctl enable docker
+apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
-EOF      
+EOF
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
+systemctl restart docker
