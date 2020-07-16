@@ -1,3 +1,3 @@
 #!/bin/bash
 sudo echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPole2fK88FJK1Y56uNdvrNauMaWEnpGJ1pilwJQy48Ort3dpsvxnUOapZGPGfC4NC6a1o8dpUhdTMvNYzAFAmZjE4K35SZ8FFqN94TQNmYLN+k2n0EUPPjDPgsPg6kbm16NkIXpjJ8kXfJZr23H/93uxjWf9O3NCXtM61/XB/PiX6faxcR5mksdMprFhIeoPU3DtKDFlOq5HcLL/msfzuRDhMplHt8uVwoSfmdbqCgh1oZZiu8OiKb5pJix6soDAzh5zUtNss2wohI3x2MdPRqIXIKWX3PwiXx6pVhqQwaFwA7s5sDmSUuGPjDHXXIZLa9iIdlGRaz6pP5RfWydXL' >> .ssh/authorized_keys
-kubeadm join 10.10.0.183:6443 --token gf3nd8.giqxjmjo074agawy     --discovery-token-ca-cert-hash sha256:40bda5fa11711af5c50234deb0259cb4350dd0b90f2f8b7022d020a923bc80bc
+sudo kubeadm join 10.10.0.183:6443 --token gf3nd8.giqxjmjo074agawy     --discovery-token-ca-cert-hash sha256:40bda5fa11711af5c50234deb0259cb4350dd0b90f2f8b7022d020a923bc80bc
