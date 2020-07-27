@@ -10,11 +10,12 @@ sudo unzip sonarqube-7.5.zip
 sudo adduser sonarqube << ENDX
 1234
 1234
-
-
-
-
 First Last
+
+
+
+
+
 y
 ENDX
 
