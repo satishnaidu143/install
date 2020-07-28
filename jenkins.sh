@@ -8,7 +8,6 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
 sudo apt-get update
 sudo apt-get install jenkins -y
 sudo passwd jenkins << ENDX
-sudo passwd jenkins << ENDX
 1234
 1234
 
