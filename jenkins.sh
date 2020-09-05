@@ -16,6 +16,7 @@ ENDX
 sudo sh -c "echo \"jenkins ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers"
 sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
 sudo service sshd restart
+sleep 10s
 echo
 echo " finding jenkins password "
 echo 
@@ -23,5 +24,9 @@ echo
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 echo
 echo
+sudo apt-get update
+sudo apt-get install npm -y
+sudo apt-get install nodejs -y
+sudo apt-get awscli -y
 curl ifconfig.co
 echo

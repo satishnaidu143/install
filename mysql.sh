@@ -10,6 +10,7 @@ y
 y
 y
 y
+
 ENDX
 sudo mysql
 SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -19,8 +20,9 @@ SELECT user,authentication_string,plugin,host FROM mysql.user;
 exit
 sudo mysql -u root -p << ENDX
 sravi@143
-ENDX
 CREATE DATABASE sonarqube;
 CREATE USER sonarqube@'localhost' IDENTIFIED BY 'Sravi@143';
 GRANT ALL ON sonarqube.* to sonarqube@'localhost';
 exit
+
+ENDX

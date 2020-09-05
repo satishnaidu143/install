@@ -19,4 +19,5 @@ First Last
 y
 ENDX
 
-sudo chown -R sonarqube:sonarqube sonarqube-7.5
+sudo chown -R sonarqube:sonarqube /opt/sonarqube/sonarqube-7.5
+sudo sh -c "echo \"sonarqube ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers"
