@@ -7,17 +7,12 @@ cd /opt/sonarqube
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.5.zip
 sudo unzip sonarqube-7.5.zip
 
-sudo adduser sonarqube << ENDX
+sudo passwd sonar << ENDX
 1234
 1234
-First Last
-
-
-
-
-
-y
 ENDX
+
+sudo sh -c "echo \"sonar ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers"
 
 sudo chown -R sonarqube:sonarqube /opt/sonarqube/sonarqube-7.5
 sudo sh -c "echo \"sonarqube ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers"
