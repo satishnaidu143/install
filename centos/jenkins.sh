@@ -2,7 +2,8 @@
 sudo yum install java-1.8.0-openjdk-devel -y
 sudo yum install git -y
 sudo yum install maven -y
-curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 sudo yum upgrade
 sudo yum install jenkins -y
