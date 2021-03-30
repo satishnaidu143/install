@@ -8,9 +8,19 @@ sudo yum install jenkins -y
 sudo systemctl start jenkins
 systemctl status jenkins
 sudo systemctl enable jenkins
+sudo passwd jenkins << ENDX
+1234
+1234
+ENDX
+
+sudo sh -c "echo \"jenkins ALL=(ALL:ALL) NOPASSWD: ALL\" >> /etc/sudoers"
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+
 sleep 10s
 echo "find the jenkins password"
 echo
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 echo
+echo
+curl ifconfig.co
 echo
